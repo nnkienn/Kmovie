@@ -10,9 +10,12 @@
 			<div class="item home__cover" data-bg="<?=$_ENV['BASE_URL']?>/template/img/home/home__bg4.jpg"></div>
 		</div>
 		<!-- end home bg -->
-
+		
 		<div class="container">
 			<div class="row">
+			<div class="col-12">
+			</div>
+				
 				<div class="col-12">
 					<h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
 
@@ -67,7 +70,7 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- content title -->
-                        <h2 class="content__title">New items</h2>
+                        <h2 class="content__title">Phim nổi bật</h2>
                         <!-- end content title -->
 
                         <!-- content tabs nav -->
@@ -1177,7 +1180,7 @@
             <div class="row">
                 <!-- section title -->
                 <div class="col-12">
-                    <h2 class="section__title">Expected premiere</h2>
+                    <h2 class="section__title">Phim mới</h2>
                 </div>
                 <!-- end section title -->
 
@@ -1186,90 +1189,19 @@
                 <!-- end card -->
 
                
-
-                <!-- section btn -->
                 <div class="col-12">
-                    <a href="#" class="section__btn">Show more</a>
-                </div>
+					<?= $pages ?>
+				</div>
+                <!-- section btn -->
+                <!-- paginator -->
+				
+				<!-- end paginator -->
                 <!-- end section btn -->
             </div>
         </div>
     </section>
     <!-- end expected premiere -->
 
-    <!-- partners -->
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <!-- section title -->
-                <div class="col-12">
-                    <h2 class="section__title section__title--no-margin">Our Partners</h2>
-                </div>
-                <!-- end section title -->
 
-                <!-- section text -->
-                <div class="col-12">
-                    <p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a
-                        reader will be distracted by the readable content of a page when looking at its layout. The
-                        point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                        opposed to using.</p>
-                </div>
-                <!-- end section text -->
 
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/themeforest-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/audiojungle-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/codecanyon-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/photodune-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/activeden-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-
-                <!-- partner -->
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-                    <a href="#" class="partner">
-                        <img src="<?=$_ENV['BASE_URL']?>/template/img/partners/3docean-light-background.png" alt=""
-                            class="partner__img">
-                    </a>
-                </div>
-                <!-- end partner -->
-            </div>
-        </div>
-    </section>
-    <!-- end partners -->
+   

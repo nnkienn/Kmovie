@@ -31,31 +31,11 @@ class MenuController extends Controller
             'description' => $menu['description'],
             'template' => 'menus/list',
             'menu' => $menu,
-            'products' => $this->productModel->getByIsActive(12, 0, $menu['id'])
+            'products' => $this->productModel->getByIsActive(12, 0, $menu['id']),
         ]);
     }
 
-    public function show()
-    {
-        $sort = $this->input('sort');
-        if ($sort != null && !in_array($sort, ['desc', 'asc'])) {
-            return json(['error' => true, 'message' => 'Định dạng sắp xếp không đúng']);
-        }
+ 
 
-        $page = (int)$this->input('page');
-        $arrayPrice = [];
-
-
-        #kiểm tra danh mục truyền lên
-        $menuId = (int) $this->input('menudId');
-        $menu = $this->menuModel->showIsActive($menuId);
-        if ($menu == null) {
-            return json(['error' => true, 'message' => 'ID không tồn tại hoặc chưa kích hoạt']);
-        }
-
-        $offset = ($page - 1) * 12;
-        $products = $this->productModel->getByIsActiveLoadMore(12, $offset, $menu['id'], $sort, $arrayPrice);
-
-        return json(['error' => false, 'products' => $products]);
-    }
+   
 }

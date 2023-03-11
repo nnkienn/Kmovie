@@ -49,18 +49,7 @@
 				</div>
 				<!-- end footer list -->
 
-				<!-- footer copyright -->
-				<div class="col-12">
-					<div class="footer__copyright">
-						<small>© 2020 FlixGo. Create by <a href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Dmitry Volkov</a></small>
-
-						<ul>
-							<li><a href="privacy.html">Terms of Use</a></li>
-							<li><a href="privacy.html">Privacy Policy</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- end footer copyright -->
+			
 			</div>
 		</div>
 	</footer>

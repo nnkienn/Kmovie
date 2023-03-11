@@ -31,7 +31,8 @@ class MainController extends Controller{
 
                 'sliders' => $this->sliderModel->getActive(),
                 'menus' => $this->menuModel->getAllMenuIsActiveParent(),
-                'products' => $this->productModel->getProductById(),
+                'products' => $this->productModel->getByIsActive($limit,$offset),
+                'pages' => Paginate::view($numRows,$limit,$page)
             
         ]
     );

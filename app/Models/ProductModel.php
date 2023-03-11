@@ -48,14 +48,7 @@ class ProductModel extends Model
         return $this->query($sql);
     }
 
-    public function getByIsActiveLoadMore($limit = 12, $offset = 0, $menuId = 0, $sort = 'desc')
-    {
-        $sql = "SELECT id, title, description , content, thumb from $this->table 
-                where is_active = 1 && menu_id = $menuId ";
-
-       
-        return $this->getArrray($sql);
-    }
+    
 
     public function countRowsByMenuId(int $menuId)
     {
@@ -66,12 +59,16 @@ class ProductModel extends Model
 
     public function getProductById(int $id = 0)
     {
-        return $this->query("SELECT id , title , thumb from $this->table");
+        $sql = "select products.*, menus.title as menu_title from $this->table
+             left JOIN menus on $this->table.menu_id = menus.id 
+             where $this->table.id = $id && $this->table.is_active = 1";
+
+        return $this->first($sql);
     }
 
     public function getMoreProduct(int $id)
     {
-        $sql = "SELECT id, title, description , content, thumb  from $this->table 
+        $sql = "SELECT id, title,thumb from $this->table 
                 where is_active = 1 && id != $id order by id desc limit 8 ";
                 
         return $this->query($sql);

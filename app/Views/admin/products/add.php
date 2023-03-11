@@ -6,6 +6,8 @@
                 <input type="text" value="<?=old('title')?>" class="form-control" name="title">
             </div>
         </div>
+  
+
 
         <div class="col-md-4">
             <div class="form-group">
