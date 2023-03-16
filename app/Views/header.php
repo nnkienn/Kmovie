@@ -5,7 +5,7 @@
                 <div class="col-12">
                     <div class="header__content">
                         <!-- header logo -->
-                        <a href="index.html" class="header__logo">
+                        <a href="/" class="header__logo">
                             <img src="<?=$_ENV['BASE_URL']?>/template/img/logo.png" alt="">
                         </a>
                         <!-- end header logo -->
@@ -18,8 +18,8 @@
 
 
                             </li>
-                                <?php $menusTop = \App\Helpers\ViewComposer::getDataMenuIsActive();?>
-                              <?=\App\Helpers\ViewComposer::loadViewMenuTop($menusTop)?>
+                            <?php $menusTop = \App\Helpers\ViewComposer::getDataMenuIsActive();?>
+                            <?=\App\Helpers\ViewComposer::loadViewMenuTop($menusTop)?>
                               
             
 
@@ -36,22 +36,7 @@
                             </li>
 
                             <!-- dropdown -->
-                            <li class="dropdown header__nav-item">
-                                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#"
-                                    role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icon ion-ios-more"></i></a>
-
-                                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="profile.html">Profile</a></li>
-                                    <li><a href="signin.html">Sign In</a></li>
-                                    <li><a href="signup.html">Sign Up</a></li>
-                                    <li><a href="forgot.html">Forgot password</a></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="contacts.html">Contacts</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                </ul>
-                            </li>
+                          
                             <!-- end dropdown -->
                         </ul>
                         <!-- end header nav -->
@@ -92,19 +77,18 @@
         </div>
     </div>
 
-    <!-- header search -->
-    <form action="#" class="header__search">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="header__search-content">
-                        <input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+    <form action="{{ route('search.index') }}" class="header__search">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header__search-content">
+                    <input type="text" name="keyword" placeholder="Search for a movie, TV Series that you are looking for">
 
-                        <button type="button">search</button>
-                    </div>
+                    <button type="submit">search</button>
                 </div>
             </div>
         </div>
-    </form>
-    <!-- end header search -->
+    </div>
+</form>
+
 </header>

@@ -1,8 +1,7 @@
-<?php if ($products->num_rows > 0) { 
-        while ($product = $products->fetch_assoc()) { ?>
-
-<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-    <div class="card">
+<?php if ($content2->num_rows > 0) {  ?>
+    <?php foreach ($content2 as $product) { ?>
+        <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+        <div class="card">
         <div class="card__cover">
             <img src="<?=$_ENV['BASE_URL'] . $product['thumb']?>" alt="IMG-PRODUCT">
             <a href="<?=$_ENV['BASE_URL']. \System\Src\Str::slug($product['title'])?>-id<?=$product['id']?>.html"
@@ -19,7 +18,7 @@
             <span class="card__rate"><i class="icon ion-ios-star"></i><?=$product['rating']?></span>
         </div>
     </div>
-</div>
-
-
-<?php } } ?>
+     </div>
+        <!-- end card -->
+    <?php } ?>
+<?php } ?>

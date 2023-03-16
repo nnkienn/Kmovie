@@ -10,10 +10,7 @@
     <!-- header -->
     <?php include __VIEW__ . "header.php";?>
 
-    <!-- end header -->
-
-    <!-- home -->
-    <!-- end home -->z
+   
 
   
 
@@ -37,6 +34,7 @@
     <script src="<?=$_ENV['BASE_URL']?>/template/js/photoswipe.min.js"></script>
     <script src="<?=$_ENV['BASE_URL']?>/template/js/photoswipe-ui-default.min.js"></script>
     <script src="<?=$_ENV['BASE_URL']?>/template/js/main.js"></script>
+
 </body>
 
 </html>

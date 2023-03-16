@@ -17,8 +17,26 @@
                 </select>
             </div>
         </div>
-
-
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Country</label>
+                <input type="text" value="<?=old('Country')?>" class="form-control" name="Country">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>rating</label>
+                <input type="text" value="<?=old('rating')?>" class="form-control" name="rating">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>runningtime</label>
+                <input type="text" value="<?=old('runningtime')?>" class="form-control" name="runningtime">
+            </div>
+        </div>
+  
+  
      
         <div class="col-md-12">
             <div class="form-group">

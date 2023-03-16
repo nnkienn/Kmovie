@@ -16,7 +16,7 @@ class ProductsController extends Controller{
     {
         $products= $this->productModel->getProductById($id);
         return view('main',[
-            'title' => 'phim',
+            'title' =>$products['title'] . '- Kmovie',
             'template' => 'products/watch',
             'products' => $this->productModel->getProductById($id)
         ]);

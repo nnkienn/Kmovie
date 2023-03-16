@@ -2,7 +2,7 @@
 	
 
 	<!-- page title -->
-	<section class="section section--first section--bg" data-bg="img/section/section.jpg">
+	<section class="section section--first section--bg"  data-bg="<?=$_ENV['BASE_URL']?>/template/img/section/section.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -158,7 +158,7 @@
 			
 				<!-- section btn -->
 				<div class="col-12">
-					<a href="#" class="section__btn">Show more</a>
+					<?=$pages?>
 				</div>
 				<!-- end section btn -->
 			</div>

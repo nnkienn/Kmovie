@@ -41,12 +41,24 @@ class ProductModel extends Model
 
     public function getByIsActive($limit = 12, $offset = 0, $menuId = 0)
     {
-        $sql = "SELECT id, title, thumb from $this->table where is_active = 1";
+        $sql = "SELECT * from $this->table where is_active = 1";
         if ($menuId != 0) { $sql .= " && menu_id = $menuId "; }
         $sql .= " order by id desc limit $limit offset $offset ";
 
         return $this->query($sql);
     }
+
+    public function getByMenuId($id, $limit = 12)
+    {
+        $sql = "SELECT products.*, menus.title AS title_name 
+                FROM products 
+                INNER JOIN menus ON products.menu_id = menus.id 
+                WHERE products.menu_id = $id
+                LIMIT $limit;";
+            
+        return $this->query($sql);
+    }
+    
 
     
 

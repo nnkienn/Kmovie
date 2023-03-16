@@ -12,6 +12,7 @@ use App\Controllers\FaqController;
 
 $_Routes['danh-muc/{slug}-id{id}.html'] = [App\Controllers\MenuController::class, 'index'];
 $_Routes['{slug}-id{id}.html'] = [App\Controllers\ProductsController::class, 'index'];
+$_Routes['search'] = [App\Controllers\MainController::class, 'search'];
 
 
 $_Routes['admin/users/login']=[LoginController::class,'login'];
